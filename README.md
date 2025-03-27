@@ -2,7 +2,6 @@
 ![](chart.png)
 
 # Analisi PM10 a Torino
-
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/alriss/torino_pm10_analysis?include_prereleases)
 ![GitHub last commit](https://img.shields.io/github/last-commit/alriss/torino_pm10_analysis)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/alriss/torino_pm10_analysis)
@@ -11,6 +10,14 @@
 ![codesize](https://img.shields.io/github/languages/code-size/alriss/torino_pm10_analysis) 
 
 Questo progetto ha l'obiettivo di visualizzare in modo efficace i livelli giornalieri di PM10 a Torino nel 2024. Il dato viene messo in relazione con le precipitazioni e l'utilizzo degli impianti di riscaldamento. Inoltre sono state effettuati dei test statistici per valutare l'effetto di questi fattori sull'inquinamento atmosferico.
+
+## Indice
+
+[Dati](##dati)
+[Struttura della repository](##struttura-della-repository)
+[Funzionalità](##funzionalità)
+[Installazione](##installazione)
+[Licenza](##licenza)
 
 ## Dati
 
@@ -50,9 +57,6 @@ Questo progetto ha l'obiettivo di visualizzare in modo efficace i livelli giorna
 3. Esegui lo script principale:
    ```bash
    python src/main.py
-
-## Esempio di output
-
 
 ## Licenza
 MIT License
