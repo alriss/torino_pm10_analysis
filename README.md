@@ -23,14 +23,14 @@ Questo progetto ha l'obiettivo di visualizzare in modo efficace i livelli giorna
 ## Struttura della repository
 
 ```bash
-│── data/                      -> Cartella con i file CSV
-│── src/                       -> Contiene gli script Python
-│   │── main.py                -> Script principale
-│   │── utils.py               -> Funzioni utili (es. caricamento e pulizia dei dati)
-│   │── visualization.py       -> Funzioni per la creazione dei grafici
-│   │── statistical_tests.py   -> Funzioni per test statistici e modelli
-│── requirements.txt           -> Dipendenze Python
-│── README.md                  -> Documentazione del progetto
+│── data/                      # Cartella con i file CSV
+│── src/                       # Contiene gli script Python
+│   │── main.py                # Script principale
+│   │── utils.py               # Funzioni utili (es. caricamento e pulizia dei dati)
+│   │── visualization.py       # Funzioni per la creazione dei grafici
+│   │── statistical_tests.py   # Funzioni per test statistici e modelli
+│── requirements.txt           # Dipendenze Python
+│── README.md                  # Documentazione del progetto
 │── .gitignore                 
 ```
 
