@@ -175,7 +175,7 @@ def plot_pm10(df_pm10, df_piogge, df_temp, temp_thr=6):
     
     #plt.show()
     plt.title('PM10 (Torino, 2024)', loc='center', fontdict={'fontsize': 24, 'fontweight': 'bold'})
-    plt.savefig('../pm10_torino.pdf', bbox_inches='tight')
+    plt.savefig('../img/pm10_torino.pdf', bbox_inches='tight')
 
 def plot_correlation(df, lags, ccf, pvals):
 
@@ -221,4 +221,4 @@ def plot_correlation(df, lags, ccf, pvals):
     ax.invert_yaxis() 
 
     #plt.show()
-    plt.savefig(f'../cross_correlation_chart_{df.columns[1]}.pdf', bbox_inches='tight')
+    plt.savefig(f'../img/cross_correlation_chart_{df.columns[1]}.pdf', bbox_inches='tight')

@@ -1,4 +1,4 @@
-![](pm10_torino.pdf)
+![](img/pm10_torino.png)
 
 # Air Pollution Analysis: PM10 in Turin (2024)
 ![GitHub last commit](https://img.shields.io/github/last-commit/alriss/torino_pm10_analysis)
@@ -30,14 +30,21 @@ This project aims to effectively visualize the daily PM10 levels in Turin in 202
 The repository structure is as follows:
 
 ```bash
-│── data/                      # Folder containing CSV files
-│── src/                       # Contains Python scripts
-│   │── main.py                # Main script
-│   │── utils.py               # Utility functions (e.g., data loading and cleaning)
-│   │── visualization.py       # Functions for creating charts
-│   │── statistical_tests.py   # Functions for statistical tests and models
-│── requirements.txt           # Python dependencies
-│── README.md                  # Project documentation
+│── data/                                       # Folder containing CSV files
+│── src/                                        # Contains Python scripts
+│   │── main.py                                 # Main script
+│   │── utils.py                                # Utility functions (e.g., data loading and cleaning)
+│   │── visualization.py                        # Functions for creating charts
+│   │── statistical_tests.py                    # Functions for statistical tests and models
+│── img/                                        # Images
+│   │── cross_correlation_chart_Pioggia.pdf                
+│   │── cross_correlation_chart_Pioggia.png                
+│   │── cross_correlation_chart_Temperatura.pdf            
+│   │── cross_correlation_chart_Temperatura.png            
+│   │── pm10_torino.pdf                
+│   │── pm10_torino.png                
+│── requirements.txt                            # Python dependencies
+│── README.md                                   # Project documentation
 │── .gitignore                 
 ```
 
