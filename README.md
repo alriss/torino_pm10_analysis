@@ -1,111 +1,115 @@
+![](pm10_torino.pdf)
 
-![](chart.png)
-
-# Analisi PM10 a Torino
+# PM10 Analysis in Turin
 ![GitHub last commit](https://img.shields.io/github/last-commit/alriss/torino_pm10_analysis)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/alriss/torino_pm10_analysis)
 ![GitHub](https://img.shields.io/github/license/alriss/torino_pm10_analysis)
-![contributors](https://img.shields.io/github/contributors/alriss/torino_pm10_analysis) 
-![codesize](https://img.shields.io/github/languages/code-size/alriss/torino_pm10_analysis) 
+![contributors](https://img.shields.io/github/contributors/alriss/torino_pm10_analysis)
+![codesize](https://img.shields.io/github/languages/code-size/alriss/torino_pm10_analysis)
 
-Questo progetto ha l'obiettivo di visualizzare in modo efficace i livelli giornalieri di PM10 a Torino nel 2024. I dati sono analizzati in relazione alle precipitazioni e all'uso degli impianti di riscaldamento. Sono stati inoltre effettuati test statistici per valutare l'impatto di questi fattori sull'inquinamento atmosferico.
+[Italiano](README-ID.md)
 
-## Indice
+This project aims to effectively visualize the daily PM10 levels in Turin in 2024. Data is analyzed in relation to precipitation and heating system usage. Statistical tests have also been conducted to evaluate the impact of these factors on air pollution.
 
-- [Struttura della repository](#struttura-della-repository)
-- [Installazione e setup](#installazione-e-setup)
-   - [Risorse utilizzate](#risorse-utilizzate)
-   - [Librerie Python](#librerie-python)
-- [Dati](#dati)
-- [Analisi e risultati](#analisi-e-risultati)
-   - [Pulizia dei dati](#pulizia-dei-dati)
-   - [Visualizzazione dei dati](#visualizzazione-dei-dati)
-   - [Analisi](#analisi)
-   - [Risultati](#risultati)
-- [Sviluppi futuri](#sviluppi-futuri)
-- [Licenza](#licenza)
+## Table of Contents
 
-## Struttura della repository
-La struttura della repository è la seguente:
+- [Repository Structure](#repository-structure)
+- [Installation and Setup](#installation-and-setup)
+   - [Resources Used](#resources-used)
+   - [Python Libraries](#python-libraries)
+- [Data](#data)
+- [Analysis and Results](#analysis-and-results)
+   - [Data Cleaning](#data-cleaning)
+   - [Data Visualization](#data-visualization)
+   - [Analysis](#analysis)
+   - [Results](#results)
+- [Future Developments](#future-developments)
+- [License](#license)
+
+## Repository Structure
+The repository structure is as follows:
 
 ```bash
-│── data/                      # Cartella con i file CSV
-│── src/                       # Contiene gli script Python
-│   │── main.py                # Script principale
-│   │── utils.py               # Funzioni utili (es. caricamento e pulizia dei dati)
-│   │── visualization.py       # Funzioni per la creazione dei grafici
-│   │── statistical_tests.py   # Funzioni per test statistici e modelli
-│── requirements.txt           # Dipendenze Python
-│── README.md                  # Documentazione del progetto
+│── data/                      # Folder containing CSV files
+│── src/                       # Contains Python scripts
+│   │── main.py                # Main script
+│   │── utils.py               # Utility functions (e.g., data loading and cleaning)
+│   │── visualization.py       # Functions for creating charts
+│   │── statistical_tests.py   # Functions for statistical tests and models
+│── requirements.txt           # Python dependencies
+│── README.md                  # Project documentation
 │── .gitignore                 
 ```
 
-## Installazione e setup
-1. Clona la repository:
+## Installation and Setup
+1. Clone the repository:
    ```bash
    git clone https://github.com/alriss/torino_pm10_analysis.git
    cd torino_pm10_analysis
-2. Installa le dipendenze:
+   ```
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt
-3. Esegui lo script principale:
+   ```
+3. Run the main script:
    ```bash
    python src/main.py
- 
-### Risorse utilizzate
-Informazioni sui software:
-- **Editor:**  Visual Studio Code
+   ```
+
+### Resources Used
+Software Information:
+- **Editor:** Visual Studio Code
 - **Python:** Python 3.13.1
 
-### Librerie Python
-Le librerie necessarie sono elencate nel file `requirements.txt`. Si possono suddividere in:
-- **Manipolazione dei dati:** `pandas, numpy`
-- **Visualizzazione dei dati:** `matplotlib`
-- **Analisi dei dati:** `statsmodels, scipy`
+### Python Libraries
+The required libraries are listed in the `requirements.txt` file. They can be categorized as follows:
+- **Data Manipulation:** `pandas, numpy`
+- **Data Visualization:** `matplotlib`
+- **Data Analysis:** `statsmodels, scipy`
 
-## Dati
+## Data
 
-- **Torino_Lingotto_PM10_2024.csv:**: Livelli giornalieri di PM10 misurati con metodo gravimetrico dalla stazione [Torino - Lingotto](https://webgis.arpa.piemonte.it/secure_apps/qualita_aria/dati_anagrafici/index.php?NUMCODICE=001272-806) (fonte: [ARPA](https://aria.ambiente.piemonte.it/qualita-aria/dati)).
+- **Torino_Lingotto_PM10_2024.csv:** Daily PM10 levels measured using the gravimetric method from the [Torino - Lingotto](https://webgis.arpa.piemonte.it/secure_apps/qualita_aria/dati_anagrafici/index.php?NUMCODICE=001272-806) station (source: [ARPA](https://aria.ambiente.piemonte.it/qualita-aria/dati)).
 
-- **Torino_Vallere_precipitazioni_2024.csv:** Altezza della pioggia caduta giornalmente dalla stazione Torino - Vallere (fonte: [ARPA](https://www.arpa.piemonte.it/rischi_naturali/snippets_arpa_graphs/dati_giornalieri_meteo/?statid=PIE-001272-904-2001-05-17&param=P)). Questa [guida](https://www.arpa.piemonte.it/rischi_naturali/document/Guida_alla_lettura_dati_meteo_-_Banca_Dati_Storica.pdf) fornisce informazioni aggiuntive.
+- **Torino_Vallere_precipitazioni_2024.csv:** Daily rainfall height from the Torino - Vallere station (source: [ARPA](https://www.arpa.piemonte.it/rischi_naturali/snippets_arpa_graphs/dati_giornalieri_meteo/?statid=PIE-001272-904-2001-05-17&param=P)). This [guide](https://www.arpa.piemonte.it/rischi_naturali/document/Guida_alla_lettura_dati_meteo_-_Banca_Dati_Storica.pdf) provides additional information.
 
-- **Torino_Vallere_temperature_2024.csv:** Temperatura giornaliera registrata dalla stazione Torino - Vallere (fonte: [ARPA](https://www.arpa.piemonte.it/rischi_naturali/snippets_arpa_graphs/dati_giornalieri_meteo/?statid=PIE-001272-904-2001-05-17&param=T)). Questa [guida](https://www.arpa.piemonte.it/rischi_naturali/document/Guida_alla_lettura_dati_meteo_-_Banca_Dati_Storica.pdf) fornisce informazioni aggiuntive.
+- **Torino_Vallere_temperature_2024.csv:** Daily temperature recorded by the Torino - Vallere station (source: [ARPA](https://www.arpa.piemonte.it/rischi_naturali/snippets_arpa_graphs/dati_giornalieri_meteo/?statid=PIE-001272-904-2001-05-17&param=T)). This [guide](https://www.arpa.piemonte.it/rischi_naturali/document/Guida_alla_lettura_dati_meteo_-_Banca_Dati_Storica.pdf) provides additional information.
 
 ### Data Preprocessing
-- **PM10:** Il dataset è stato filtrato per `Id Parametro='PM10_GBV'` in modo da tenere solo le misurazioni ottenute con metodo gravimetrico. Le colonne utilizzate sono `Data rilevamento` e `Valore`.
-- **Precipitazioni:** Le colonne utilizzate sono `DATA` e `Precipitazione (mm)`. Per le analisi la misura `Precipitazione (mm)` è stata trasformata in un flag in modo da creare una nuova feature: la nuova colonna presenta il valore 1 se la misura è > 0 altrimenti 0, in questo modo si distinguono i giorni in cui ha piovuto, a prescindere dalla quantità di pioggia, da quelli in cui non ha piovuto.
-- **Temperatura:** Le colonne utilizzate sono `DATA` e `Temperatura minima`. Per le analisi la misura `Temperatura minima` è stata trasformata in un flag in modo da creare una nuova feature: la nuova colonna presenta il valore 1 se la misura è <`temp_thr` (soglia arbitrariamente impostata a 6 modificabile nello script) altrimenti 0, in questo modo si distinguono i giorni in cui la temperatura minima è scesa al di sotto della soglia, a prescindere dalla temperatura raggiunta, da quelli in cui ciò non è accaduto.
+- **PM10:** The dataset was filtered for `Id Parametro='PM10_GBV'` to retain only gravimetric method measurements. The columns used are `Data rilevamento` and `Valore`.
+- **Precipitation:** The columns used are `DATA` and `Precipitazione (mm)`. For analysis, `Precipitazione (mm)` was converted into a binary flag, creating a new feature: the new column has a value of 1 if the measurement is > 0, otherwise 0, to distinguish rainy days from non-rainy ones regardless of the rainfall amount.
+- **Temperature:** The columns used are `DATA` and `Temperatura minima`. For analysis, `Temperatura minima` was converted into a binary flag, creating a new feature: the new column has a value of 1 if the measurement is <`temp_thr` (arbitrarily set to 6, adjustable in the script), otherwise 0, to distinguish days when the minimum temperature dropped below the threshold from those when it did not.
 
-## Analisi e risultati
+## Analysis and Results
 
-### Pulizia dei dati
-- Rimozione dei valori nulli e gestione delle anomalie.
-- Conversione delle colonne temporali in formato datetime per una migliore manipolazione.
-- Creazione di nuove feature binarie per precipitazioni (>0 mm) e presunto utilizzo del riscaldamento (temperatura minima<6°C), utili per le analisi successive.
+### Data Cleaning
+- Removal of null values and handling of anomalies.
+- Conversion of time columns to datetime format for better manipulation.
+- Creation of new binary features for precipitation (>0 mm) and presumed heating usage (minimum temperature <6°C), useful for subsequent analyses.
 
-### Visualizzazione dei dati
-- Grafico a linee per evidenziare l'andamento dei livelli di PM10 nel tempo.
-- Aggiunta di event plot per visualizzare la distribuzione di precipitazioni e temperatura minima sotto la soglia scelta.
-- Lollipop plot per visualizzare la correlazione tra le variabili per diversi valori di lag (sfasamento temporale).
+### Data Visualization
+- Line chart to highlight PM10 level trends over time.
+- Event plot to visualize the distribution of precipitation and minimum temperature below the chosen threshold.
+- Lollipop plot to show the correlation between variables for different lag values (time shifts).
 
-### Analisi
-- **Regressione lineare** per stimare l'impatto delle precipitazioni e della temperatura sui livelli di PM10.
-- **Analisi di correlazione**:
-  - Test di Spearman per valutare la relazione diretta tra variabili (lag = 0).
-  - Cross-correlation function (CCF) per verificare effetti ritardati (lag > 0).
-  - Test di Granger per determinare causalità temporale tra temperatura, pioggia e PM10.
+### Analysis
+- **Linear Regression** to estimate the impact of precipitation and temperature on PM10 levels.
+- **Correlation Analysis:**
+  - Spearman test to assess the direct relationship between variables (lag = 0).
+  - Cross-correlation function (CCF) to verify delayed effects (lag > 0).
+  - Granger causality test to determine the temporal causality between temperature, rain, and PM10.
 
-### Risultati
-- **Effetto combinato:** L'analisi suggerisce che la combinazione di basse temperature e assenza di precipitazioni aumenta significativamente i livelli di PM10.
-- **Effetti della pioggia:** Nei giorni di pioggia si osserva una riduzione media della concentrazione di PM10.
-- **Effetti del riscaldamento:** I giorni con temperatura minima inferiore a 6°C mostrano una tendenza all'aumento dell'inquinamento atmosferico.
+### Results
+- **Combined Effect:** Analysis suggests that a combination of low temperatures and lack of precipitation significantly increases PM10 levels.
+- **Rainfall Effects:** On rainy days, a reduction in PM10 concentration is observed.
+- **Heating Effects:** Days with minimum temperatures below 6°C tend to show increased air pollution levels.
 
-## Sviluppi futuri
+## Future Developments
 
-- **Modello di previsione:** Implementazione di un modello basato su `prophet` per prevedere i livelli di PM10 sfruttando i dati storici.
-- **Predizione giornaliera:** Sviluppo di un modello predittivo che utilizzi i dati di pioggia e temperatura per stimare i livelli di PM10 in tempo reale, utile per fornire allerte rapide considerando che le misurazioni ufficiali richiedono analisi di laboratorio.
+- **Forecasting Model:** Implementation of a `prophet`-based model to predict PM10 levels using historical data.
+- **Daily Prediction:** Development of a predictive model using rain and temperature data to estimate real-time PM10 levels. This would be useful for issuing rapid alerts, considering that official measurements require laboratory analysis.
 
-## Licenza
+## License
 MIT License
 
 Copyright (c) 2025 Alberto Rissone
