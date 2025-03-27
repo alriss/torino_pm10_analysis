@@ -1,4 +1,5 @@
-![](img/pm10_torino.png)
+![](img/turin_skyline.jpg)
+*Foto di [Fabio Fistarol](https://unsplash.com/it/@fabiofistarol?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) su [Unsplash](https://unsplash.com/it/foto/veduta-aerea-degli-edifici-della-citta-durante-il-giorno-VjA_PSSsOHI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)*
 
 # Analisi dell'inquinamento atmosferico: PM10 a Torino (2024)
 ![GitHub last commit](https://img.shields.io/github/last-commit/alriss/torino_pm10_analysis)
@@ -92,7 +93,12 @@ Le librerie necessarie sono elencate nel file `requirements.txt`. Si possono sud
 ### Visualizzazione dei dati
 - Grafico a linee per evidenziare l'andamento dei livelli di PM10 nel tempo.
 - Aggiunta di event plot per visualizzare la distribuzione di precipitazioni e temperatura minima sotto la soglia scelta.
+
+![](img/pm10_torino.png)
+
 - Lollipop plot per visualizzare la correlazione tra le variabili per diversi valori di lag (sfasamento temporale).
+
+![](img/cross_correlation_chart_Temperatura.png)
 
 ### Analisi
 - **Regressione lineare** per stimare l'impatto delle precipitazioni e della temperatura sui livelli di PM10.

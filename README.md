@@ -1,3 +1,6 @@
+![](img/turin_skyline.jpg)
+*Foto di [Fabio Fistarol](https://unsplash.com/it/@fabiofistarol?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) su [Unsplash](https://unsplash.com/it/foto/veduta-aerea-degli-edifici-della-citta-durante-il-giorno-VjA_PSSsOHI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)*
+
 # Air Pollution Analysis: PM10 in Turin (2024)
 ![GitHub last commit](https://img.shields.io/github/last-commit/alriss/torino_pm10_analysis)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/alriss/torino_pm10_analysis)
