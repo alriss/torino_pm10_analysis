@@ -15,9 +15,10 @@ Questo progetto ha l'obiettivo di visualizzare in modo efficace i livelli giorna
 
 1. [Dati](#dati)
 2. [Struttura della repository](#struttura-della-repository)
-3. [Funzionalità](#funzionalità)
-4. [Installazione](#installazione)
-5. [Licenza](#licenza)
+3. [Installazione](#installazione)
+4. [Analisi e risultati](#analisi-e-risultati)
+5. [Sviluppi futuri](@sviluppi-futuri)
+6. [Licenza](#licenza)
 
 ## Dati
 
@@ -28,6 +29,7 @@ Questo progetto ha l'obiettivo di visualizzare in modo efficace i livelli giorna
 - **Torino_Vallere_temperature_2024.csv**: dati relativi alla emperatura messi a disposizione da [ARPA](https://www.arpa.piemonte.it/rischi_naturali/snippets_arpa_graphs/dati_giornalieri_meteo/?statid=PIE-001272-904-2001-05-17&param=T), in particolare si tratta  della temperatura minima dei giorni dal 1/1/2024 al 31/12/2024. Le misurazioni provengono dalla stazione Torino - Vallere. La [guida](https://www.arpa.piemonte.it/rischi_naturali/document/Guida_alla_lettura_dati_meteo_-_Banca_Dati_Storica.pdf) fornisce informazioni aggiuntive. 
 
 ## Struttura della repository
+La struttura della repository è la seguente:
 
 ```bash
 │── data/                      # Cartella con i file CSV
@@ -41,11 +43,6 @@ Questo progetto ha l'obiettivo di visualizzare in modo efficace i livelli giorna
 │── .gitignore                 
 ```
 
-## Funzionalità
-- Caricamento dei dati PM10, pioggia e temperatura
-- Generazione di grafici interattivi
-- Analisi statistiche (Granger, regressione, correlazioni)
-
 ## Installazione
 1. Clona la repository:
    ```bash
@@ -58,5 +55,29 @@ Questo progetto ha l'obiettivo di visualizzare in modo efficace i livelli giorna
    ```bash
    python src/main.py
 
+## Analisi e risultati
+
+## Sviluppi futuri
+
 ## Licenza
 MIT License
+
+Copyright (c) 2025 Alberto Rissone
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
