@@ -13,13 +13,13 @@ Questo progetto ha l'obiettivo di visualizzare in modo efficace i livelli giorna
 
 ## Indice
 
-[Dati](#dati)
-[Struttura della repository](#struttura-della-repository)
-[Funzionalità](#funzionalità)
-[Installazione](#installazione)
-[Licenza](#licenza)
+1. [Dati](#dati)
+2. [Struttura della repository](#struttura-della-repository)
+3. [Funzionalità](#funzionalità)
+4. [Installazione](#installazione)
+5. [Licenza](#licenza)
 
-# Dati
+## Dati
 
 - **Torino_Lingotto_PM10_2024.csv**: dati relativi ai livelli giornalieri di PM10 messi a disposizione da [ARPA](https://aria.ambiente.piemonte.it/qualita-aria/dati), in particolare si tratta delle misurazioni dal 1/1/2024 al 31/12/2024 della stazione [Torino - Lingotto](https://webgis.arpa.piemonte.it/secure_apps/qualita_aria/dati_anagrafici/index.php?NUMCODICE=001272-806) ottenute con metodo gravimetrico.
 
