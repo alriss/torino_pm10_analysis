@@ -22,7 +22,7 @@ Questo progetto ha l'obiettivo di visualizzare in modo efficace i livelli giorna
 
 ## Struttura della repository
 
-torino_pm10_analysis/
+```bash
 │── data/                      -> Cartella con i file CSV
 │── src/                       -> Contiene gli script Python
 │   │── main.py                -> Script principale
@@ -31,6 +31,8 @@ torino_pm10_analysis/
 │   │── statistical_tests.py   -> Funzioni per test statistici e modelli
 │── requirements.txt           -> Dipendenze Python
 │── README.md                  -> Documentazione del progetto
+│── .gitignore                 
+```
 
 ## Funzionalità
 - Caricamento dei dati PM10, pioggia e temperatura
