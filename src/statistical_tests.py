@@ -1,15 +1,11 @@
 import statsmodels.api as sm
+import numpy as np
+
+from utils import pretty_pvalue
+from visualization import plot_correlation
 from statsmodels.tsa.stattools import grangercausalitytests
 from scipy.stats import spearmanr
-from utils import pretty_pvalue
 from scipy.signal import correlate
-from visualization import plot_correlation
-
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.colors import LinearSegmentedColormap
-from matplotlib.patches import PathPatch
-from matplotlib.path import Path
 
 
 def granger_test(df, v_maxlag):

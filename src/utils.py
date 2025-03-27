@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 
 def load_pm10_data(filepath):
     """Carica il file CSV contenente i dati PM10."""
