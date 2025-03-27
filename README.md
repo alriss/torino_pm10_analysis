@@ -3,12 +3,12 @@
 
 # Analisi PM10 a Torino
 
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/pragyy/datascience-readme-template?include_prereleases)
-![GitHub last commit](https://img.shields.io/github/last-commit/pragyy/datascience-readme-template)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/pragyy/datascience-readme-template)
-![GitHub](https://img.shields.io/github/license/pragyy/datascience-readme-template)
-![contributors](https://img.shields.io/github/contributors/pragyy/datascience-readme-template) 
-![codesize](https://img.shields.io/github/languages/code-size/pragyy/datascience-readme-template) 
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/alriss/torino_pm10_analysis?include_prereleases)
+![GitHub last commit](https://img.shields.io/github/last-commit/alriss/torino_pm10_analysis)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/alriss/torino_pm10_analysis)
+![GitHub](https://img.shields.io/github/license/alriss/torino_pm10_analysis)
+![contributors](https://img.shields.io/github/contributors/alriss/torino_pm10_analysis) 
+![codesize](https://img.shields.io/github/languages/code-size/alriss/torino_pm10_analysise) 
 
 Questo progetto ha l'obiettivo di visualizzare in modo efficace i livelli giornalieri di PM10 a Torino nel 2024. Il dato viene messo in relazione con le precipitazioni e l'utilizzo degli impianti di riscaldamento. Inoltre sono state effettuati dei test statistici per valutare l'effetto di questi fattori sull'inquinamento atmosferico.
 
