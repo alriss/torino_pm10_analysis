@@ -13,12 +13,16 @@ Questo progetto ha l'obiettivo di visualizzare in modo efficace i livelli giorna
 
 ## Indice
 
-1. [Dati](#dati)
-2. [Struttura della repository](#struttura-della-repository)
-3. [Installazione](#installazione)
-4. [Analisi e risultati](#analisi-e-risultati)
-5. [Sviluppi futuri](@sviluppi-futuri)
-6. [Licenza](#licenza)
+- [Dati](#dati)
+- [Struttura della repository](#struttura-della-repository)
+- [Installazione](#installazione)
+- [Analisi e risultati](#analisi-e-risultati)
+   - [Pulizia dei dati](#pulizia-dei-dati)
+   - [Visualizzazione dei dati](#visualizzazione-dei-dati)
+   - [Analisi](#analisi)
+   - [Risultati](#risultati)
+- [Sviluppi futuri](@sviluppi-futuri)
+- [Licenza](#licenza)
 
 ## Dati
 
@@ -46,7 +50,7 @@ La struttura della repository è la seguente:
 ## Installazione
 1. Clona la repository:
    ```bash
-   git clone https://github.com/tuo-username/torino_pm10_analysis.git
+   git clone https://github.com/alriss/torino_pm10_analysis.git
    cd torino_pm10_analysis
 2. Installa le dipendenze:
    ```bash
