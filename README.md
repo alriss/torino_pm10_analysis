@@ -1,5 +1,3 @@
-![](img/pm10_torino.png)
-
 # Air Pollution Analysis: PM10 in Turin (2024)
 ![GitHub last commit](https://img.shields.io/github/last-commit/alriss/torino_pm10_analysis)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/alriss/torino_pm10_analysis)
@@ -7,7 +5,7 @@
 ![contributors](https://img.shields.io/github/contributors/alriss/torino_pm10_analysis)
 ![codesize](https://img.shields.io/github/languages/code-size/alriss/torino_pm10_analysis)
 
-[Italiano](README-ID.md)
+[Italiano](README-IT.md)
 
 This project aims to effectively visualize the daily PM10 levels in Turin in 2024. Data is analyzed in relation to precipitation and heating system usage. Statistical tests have also been conducted to evaluate the impact of these factors on air pollution.
 
@@ -97,7 +95,12 @@ The required libraries are listed in the `requirements.txt` file. They can be ca
 ### Data Visualization
 - Line chart to highlight PM10 level trends over time.
 - Event plot to visualize the distribution of precipitation and minimum temperature below the chosen threshold.
+
+![](img/pm10_torino.png)
+
 - Lollipop plot to show the correlation between variables for different lag values (time shifts).
+
+![](img/cross_correlation_chart_Temperatura.png)
 
 ### Analysis
 - **Linear Regression** to estimate the impact of precipitation and temperature on PM10 levels.

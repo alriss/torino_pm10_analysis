@@ -83,12 +83,9 @@ def plot_pm10(df_pm10, df_piogge, df_temp, temp_thr=6):
     ax.grid(axis="y", alpha=0.25)
 
     ax.axes.get_xaxis().set_ticks([])
-    ticks = ax.get_yticks()[1:-1]                           # Esclude il primo e l'ultimo tick dell'asse y
-    ax.yaxis.set_ticks(ticks)  
-    ax.yaxis.set_ticklabels([f"{i} µg/m³" for i in ticks])  # Aggiunge l'unità di misura
     ax.axes.get_yaxis().set_ticks([])
 
-    for tick in ticks:
+    for tick in [20,40,60,80]:
         ax.axhline(y = tick, color = "grey", alpha=0.25, lw=.5, zorder=-1) 
         ax.text(x = ax.get_xlim()[0]+(ax.get_xlim()[1] - ax.get_xlim()[0]) / 2.5,  
             y = tick ,  
