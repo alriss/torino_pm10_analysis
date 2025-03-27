@@ -93,12 +93,9 @@ Le librerie necessarie sono elencate nel file `requirements.txt`. Si possono sud
 ### Visualizzazione dei dati
 - Grafico a linee per evidenziare l'andamento dei livelli di PM10 nel tempo.
 - Aggiunta di event plot per visualizzare la distribuzione di precipitazioni e temperatura minima sotto la soglia scelta.
-
-![](img/pm10_torino.png)
-
 - Lollipop plot per visualizzare la correlazione tra le variabili per diversi valori di lag (sfasamento temporale).
 
-![](img/cross_correlation_chart_Temperatura.png)
+![](img/pm10_torino.png)
 
 ### Analisi
 - **Regressione lineare** per stimare l'impatto delle precipitazioni e della temperatura sui livelli di PM10.
