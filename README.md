@@ -96,7 +96,6 @@ Le librerie necessarie sono elencate nel file `requirements.txt`. Si possono sud
   - Test di Granger per determinare causalità temporale tra temperatura, pioggia e PM10.
 
 ### Risultati
-### Risultati
 - **Effetto combinato:** L'analisi suggerisce che la combinazione di basse temperature e assenza di precipitazioni aumenta significativamente i livelli di PM10.
 - **Effetti della pioggia:** Nei giorni di pioggia si osserva una riduzione media della concentrazione di PM10.
 - **Effetti del riscaldamento:** I giorni con temperatura minima inferiore a 6°C mostrano una tendenza all'aumento dell'inquinamento atmosferico.
