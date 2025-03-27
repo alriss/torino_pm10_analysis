@@ -1,6 +1,6 @@
 ![](pm10_torino.pdf)
 
-# Analisi PM10 a Torino
+# Analisi dell'inquinamento atmosferico: PM10 a Torino (2024)
 ![GitHub last commit](https://img.shields.io/github/last-commit/alriss/torino_pm10_analysis)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/alriss/torino_pm10_analysis)
 ![GitHub](https://img.shields.io/github/license/alriss/torino_pm10_analysis)
