@@ -3,6 +3,7 @@ from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.patches import PathPatch, Patch
 from matplotlib.path import Path
 import numpy as np
+import missingno as msno
 
 def set_axes_color(ax,col, top_col=None):
     for spine in ax.spines.values():
@@ -10,7 +11,18 @@ def set_axes_color(ax,col, top_col=None):
     if top_col:
         ax.spines["top"].set_color(top_col) 
 
-def plot_pm10(df_pm10, df_piogge, df_temp, temp_thr=6):
+def plotmissingval(df, beta=False):
+    msno.matrix(df, freq='BQE',figsize=(5, 10))
+    plt.title(f'Valori nulli{' | con PM10 beta' if beta else ''}')
+    plt.savefig(f'../img/nullvalues_matrix{'_beta' if beta else ''}.pdf', bbox_inches='tight')
+    plt.clf()
+
+    msno.bar(df, figsize=(5, 10))
+    plt.title(f'Valori nulli{' | con PM10 beta' if beta else ''}')
+    plt.savefig(f'../img/nullvalues_bars{'_beta' if beta else ''}.pdf', bbox_inches='tight')    
+    plt.clf()
+
+def plot_pm10(df_pm10, df_piogge, df_temp, temp_thr=6, beta=False, null_vals=None):
     """Crea il grafico dei livelli di PM10 nel tempo."""
     
     ind_val = np.isfinite(df_pm10["Valore"])
@@ -24,11 +36,26 @@ def plot_pm10(df_pm10, df_piogge, df_temp, temp_thr=6):
     # Creazione del grafico
     fig, ax = plt.subplots()
     fig.set_size_inches(25 / 365 * len(df_pm10), 8)
-
     ax.plot(xx, yy, color="#bbb", alpha=1, ls="--", zorder=0.9, lw = 0.75)  # Linea tratteggiata per i valori nulli  
     ax.plot(xx_all, yy_all, color="#999", alpha=1, zorder=1, lw = 0.75)     # Linea continua
-    ax.scatter(xx, yy, marker="x", s=10, zorder=1.1, lw=0.75,               # Marker per i valori non nulli
-               color=["#444" if i < 50 else "red" for i in yy])             # I valori sopra il limite di legge sono in rosso
+
+    if null_vals is not None:
+
+        xx_not_beta = xx_all[~null_vals]
+        yy_not_beta = yy_all[~null_vals]
+
+        ind_val = np.isfinite(yy_not_beta)
+
+        xx_not_beta = xx_not_beta[ind_val]
+        yy_not_beta = yy_not_beta[ind_val]
+
+        ax.scatter(xx_not_beta, yy_not_beta, marker="x", s=10, zorder=1.1, lw=0.75,               # Marker per i valori non nulli
+            color=["#444" if i < 50 else "darkred" for i in yy_not_beta], label='Basso volume')                # I valori sopra il limite di legge sono in rosso
+        ax.scatter(xx_all[null_vals], yy_all[null_vals], marker="o", s=10, zorder=1.1, lw=0.75, # Marker per i valori non nulli
+                color=["purple" if i < 50 else "m" for i in yy_all[null_vals]], label='Beta')                                # I valori sopra il limite di legge sono in rosso
+    else:
+        ax.scatter(xx, yy, marker="x", s=10, zorder=1.1, lw=0.75,               # Marker per i valori non nulli
+            color=["#444" if i < 50 else "darkred" for i in yy])                # I valori sopra il limite di legge sono in rosso
 
     # Creazione del path chiuso
     verts = np.vstack([[xx[0], 0], np.column_stack((xx, yy)) , [xx[-1], 0], [xx[0], 0]])
@@ -168,17 +195,21 @@ def plot_pm10(df_pm10, df_piogge, df_temp, temp_thr=6):
     legend_elements = [Patch(facecolor='cornflowerblue',label='Pioggia'),
                        Patch(facecolor='plum',label='T min < 6 °C')]
 
+    legend1 = ax.legend(ncols=2, frameon=False, bbox_to_anchor=(1, 1), markerscale=2, handletextpad=0.5)
+    for handle in legend1.legend_handles:
+        handle.set_color('#444')
+    ax.add_artist(legend1)  
     ax.legend(handles=legend_elements, ncols=2, frameon=False, loc='lower right', bbox_to_anchor=(1, -0.15))
-    
+
     #plt.show()
-    plt.title('PM10 (Torino, 2024)', loc='center', fontdict={'fontsize': 24, 'fontweight': 'bold'})
-    plt.savefig('../img/pm10_torino.pdf', bbox_inches='tight')
+    plt.title('PM10 - Torino 2024', loc='center', fontdict={'fontsize': 24, 'fontweight': 'bold'})
+    plt.savefig(f'../img/pm10_torino{'_beta' if beta else ''}.pdf', bbox_inches='tight')
+    plt.clf()
 
 def plot_correlation(df, lags, ccf, pvals):
 
     fig, ax = plt.subplots()
 
-    fig.set_size_inches(8, 4+0.3*len(lags))
 
     # Grafico a barre
     ax.barh(lags, width=abs(ccf)+ 0.01, color='grey', height=0.05)
@@ -218,4 +249,5 @@ def plot_correlation(df, lags, ccf, pvals):
     ax.invert_yaxis() 
 
     #plt.show()
-    plt.savefig(f'../img/cross_correlation_chart_{df.columns[1]}.pdf', bbox_inches='tight')
+    plt.savefig(f'../img/ccf__{df.columns[1]}.pdf', bbox_inches='tight')
+    plt.clf()

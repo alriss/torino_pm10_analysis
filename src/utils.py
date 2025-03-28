@@ -4,8 +4,13 @@ def load_pm10_data(filepath):
     """Carica il file CSV contenente i dati PM10."""
     df = pd.read_csv(filepath, index_col=False, delimiter=";")
     df["Data rilevamento"] = pd.to_datetime(df["Data rilevamento"], format="%d/%m/%Y")
-    df = df[df["Id Parametro"] == "PM10_GBV"]
     return df[df["Id Parametro"] == "PM10_GBV"]
+
+def load_beta_pm10_data(filepath):
+    """Carica il file CSV contenente i dati PM10 - Beta."""
+    df = pd.read_csv(filepath, index_col=False, delimiter=";")
+    df["Data rilevamento"] = pd.to_datetime(df["Data rilevamento"], format="%d/%m/%Y")
+    return df[df["Id Parametro"] == "PM10_B"]
 
 def load_prec_data(filepath):
     """Carica il file CSV con i dati delle precipitazioni."""

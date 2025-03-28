@@ -92,6 +92,9 @@ The required libraries are listed in the `requirements.txt` file. They can be ca
 
 ### Data Cleaning
 - Removal of null values and handling of anomalies.
+
+![](img/nullvalues_matrix.png) ![](img/nullvalues_bars.png)
+
 - Conversion of time columns to datetime format for better manipulation.
 - Creation of new binary features for precipitation (>0 mm) and presumed heating usage (minimum temperature <6°C), useful for subsequent analyses.
 
@@ -101,6 +104,7 @@ The required libraries are listed in the `requirements.txt` file. They can be ca
 - Lollipop plot to show the correlation between variables for different lag values (time shifts).
 
 ![](img/pm10_torino.png)
+![](img/pm10_torino_beta.png)
 
 ### Analysis
 - **Linear Regression** to estimate the impact of precipitation and temperature on PM10 levels.
