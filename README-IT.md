@@ -3,10 +3,10 @@
 *Immagine di [Fabio Fistarol](https://unsplash.com/it/@fabiofistarol?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) su [Unsplash](https://unsplash.com/it/foto/veduta-aerea-degli-edifici-della-citta-durante-il-giorno-VjA_PSSsOHI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)*  
 
 # Analisi dell'Inquinamento Atmosferico: PM10 a Torino (2024)  
-![GitHub pull requests](https://img.shields.io/github/issues-pr/alriss/torino_pm10_analysis)  
-![GitHub](https://img.shields.io/github/license/alriss/torino_pm10_analysis)  
-![contributors](https://img.shields.io/github/contributors/alriss/torino_pm10_analysis)  
-![codesize](https://img.shields.io/github/languages/code-size/alriss/torino_pm10_analysis)  
+![GitHub pull requests](https://img.shields.io/github/issues-pr/alriss/torino_pm10_analysis)
+![GitHub](https://img.shields.io/github/license/alriss/torino_pm10_analysis)
+![contributors](https://img.shields.io/github/contributors/alriss/torino_pm10_analysis)
+![codesize](https://img.shields.io/github/languages/code-size/alriss/torino_pm10_analysis)
 
 [English](README.md)  
 
