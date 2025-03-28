@@ -14,12 +14,12 @@ def set_axes_color(ax,col, top_col=None):
 def plotmissingval(df, beta=False):
     msno.matrix(df, freq='BQE',figsize=(5, 10))
     plt.title(f'Valori nulli{' | con PM10 beta' if beta else ''}')
-    plt.savefig(f'../img/nullvalues_matrix{'_beta' if beta else ''}.pdf', bbox_inches='tight')
+    plt.savefig(f'../img/nullvalues_matrix{'_beta' if beta else ''}.png', bbox_inches='tight')
     plt.clf()
 
     msno.bar(df, figsize=(5, 10))
     plt.title(f'Valori nulli{' | con PM10 beta' if beta else ''}')
-    plt.savefig(f'../img/nullvalues_bars{'_beta' if beta else ''}.pdf', bbox_inches='tight')    
+    plt.savefig(f'../img/nullvalues_bars{'_beta' if beta else ''}.png', bbox_inches='tight')    
     plt.clf()
 
 def plot_pm10(df_pm10, df_piogge, df_temp, temp_thr=6, beta=False, null_vals=None):
@@ -203,7 +203,7 @@ def plot_pm10(df_pm10, df_piogge, df_temp, temp_thr=6, beta=False, null_vals=Non
 
     #plt.show()
     plt.title('PM10 - Torino 2024', loc='center', fontdict={'fontsize': 24, 'fontweight': 'bold'})
-    plt.savefig(f'../img/pm10_torino{'_beta' if beta else ''}.pdf', bbox_inches='tight')
+    plt.savefig(f'../img/pm10_torino{'_beta' if beta else ''}.png', bbox_inches='tight')
     plt.clf()
 
 def plot_correlation(df, lags, ccf, pvals):
@@ -249,5 +249,5 @@ def plot_correlation(df, lags, ccf, pvals):
     ax.invert_yaxis() 
 
     #plt.show()
-    plt.savefig(f'../img/ccf__{df.columns[1]}.pdf', bbox_inches='tight')
+    plt.savefig(f'../img/ccf__{df.columns[1]}.png', bbox_inches='tight')
     plt.clf()

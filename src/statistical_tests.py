@@ -29,7 +29,7 @@ def correlation_tests(df):
     print(f"Spearman rho: {rho:.3f}, p-value: {pretty_pvalue(pval)}")
 
 def cross_correlation(df,max_lag):
-    print('\n\nCross-correlation function')
+    print(f'\n\nCross-correlation function {df.columns[0]} vs {df.columns[1]}')
     pm10_series = df.iloc[:,0] - np.mean(df.iloc[:,0])
     rain_series = df.iloc[:,1] - np.mean(df.iloc[:,1])
 
@@ -38,12 +38,13 @@ def cross_correlation(df,max_lag):
     lags = np.arange(-len(pm10_series) + 1, len(pm10_series))
 
     min_lag = 0
-     
 
     lag_mask = (lags >= min_lag) & (lags <= max_lag)
 
     lags = lags[lag_mask]
     ccf = ccf[lag_mask]
+
+    print(ccf)
 
     rho, pval = spearmanr(df.iloc[:, 0], df.iloc[:, 1])
     result = grangercausalitytests(df, max_lag, verbose=False)
