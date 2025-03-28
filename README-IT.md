@@ -88,7 +88,10 @@ Le librerie necessarie sono elencate nel file `requirements.txt`. Si possono sud
 ### Pulizia dei dati
 - Rimozione dei valori nulli e gestione delle anomalie.
 
-![](img/nullvalues_matrix.png) ![](img/nullvalues_bars.png)
+<div style="display: flex; justify-content: space-around;">
+   <img src="img/nullvalues_matrix.png" alt="Null Values Matrix" style="width: 45%;">
+   <img src="img/nullvalues_bars.png" alt="Null Values Bars" style="width: 45%;">
+</div>
 
 - Conversione delle colonne temporali in formato datetime per una migliore manipolazione.
 - Creazione di nuove feature binarie per precipitazioni (>0 mm) e presunto utilizzo del riscaldamento (temperatura minima<6°C), utili per le analisi successive.
@@ -98,7 +101,6 @@ Le librerie necessarie sono elencate nel file `requirements.txt`. Si possono sud
 - Aggiunta di event plot per visualizzare la distribuzione di precipitazioni e temperatura minima sotto la soglia scelta.
 - Lollipop plot per visualizzare la correlazione tra le variabili per diversi valori di lag (sfasamento temporale).
 
-![](img/pm10_torino.png)
 ![](img/pm10_torino_beta.png)
 
 ### Analisi
