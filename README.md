@@ -95,7 +95,7 @@ The required libraries are listed in the `requirements.txt` file. They can be ca
 
 <div style="display: flex; justify-content: space-around; align-items: flex-start;">
    <img src="img/nullvalues_matrix.png" alt="Null Values Matrix" style="width: 45%;">
-   <img src="img/nullvalues_bars.png" alt="Null Values Bars" style="width: 45%;">
+   <img src="img/nullvalues_bars.png" alt="Null Values Bars" style="width: 45%;height:80%;">
 </div>
 
 - Conversion of time columns to datetime format for better manipulation.

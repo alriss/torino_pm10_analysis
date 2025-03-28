@@ -90,7 +90,7 @@ Le librerie necessarie sono elencate nel file `requirements.txt`. Si possono sud
 
 <div style="display: flex; justify-content: space-around; align-items: flex-start;">
    <img src="img/nullvalues_matrix.png" alt="Null Values Matrix" style="width: 45%;">
-   <img src="img/nullvalues_bars.png" alt="Null Values Bars" style="width: 45%;">
+   <img src="img/nullvalues_bars.png" alt="Null Values Bars" style="width: 45%;height:80%;">
 </div>
 
 - Conversione delle colonne temporali in formato datetime per una migliore manipolazione.
