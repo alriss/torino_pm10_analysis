@@ -87,12 +87,6 @@ Le librerie necessarie sono elencate nel file `requirements.txt`. Si possono sud
 
 ### Pulizia dei dati
 - Rimozione dei valori nulli e gestione delle anomalie.
-
-<div style="display: flex; justify-content: space-around; align-items: flex-start;">
-   <img src="img/nullvalues_matrix.png" alt="Null Values Matrix" style="width: 45%;">
-   <img src="img/nullvalues_bars.png" alt="Null Values Bars" style="width: 35%;">
-</div>
-
 - Conversione delle colonne temporali in formato datetime per una migliore manipolazione.
 - Creazione di nuove feature binarie per precipitazioni (>0 mm) e presunto utilizzo del riscaldamento (temperatura minima<6°C), utili per le analisi successive.
 
