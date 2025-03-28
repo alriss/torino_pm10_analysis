@@ -93,9 +93,9 @@ The required libraries are listed in the `requirements.txt` file. They can be ca
 ### Data Cleaning
 - Removal of null values and handling of anomalies.
 
-<div style="display: flex; justify-content: space-around;">
-   <img src="img/nullvalues_matrix.png" alt="Null Values Matrix" style="width: 45%;">
-   <img src="img/nullvalues_bars.png" alt="Null Values Bars" style="width: 45%;">
+<div style="display: flex; flex-direction: column; align-items: center;">
+   <img src="img/nullvalues_matrix.png" alt="Null Values Matrix" style="width: 80%; margin-bottom: 20px;">
+   <img src="img/nullvalues_bars.png" alt="Null Values Bars" style="width: 80%;">
 </div>
 
 - Conversion of time columns to datetime format for better manipulation.

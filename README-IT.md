@@ -88,9 +88,9 @@ Le librerie necessarie sono elencate nel file `requirements.txt`. Si possono sud
 ### Pulizia dei dati
 - Rimozione dei valori nulli e gestione delle anomalie.
 
-<div style="display: flex; justify-content: space-around;">
-   <img src="img/nullvalues_matrix.png" alt="Null Values Matrix" style="width: 45%;">
-   <img src="img/nullvalues_bars.png" alt="Null Values Bars" style="width: 45%;">
+<div style="display: flex; flex-direction: column; align-items: center;">
+   <img src="img/nullvalues_matrix.png" alt="Null Values Matrix" style="width: 80%; margin-bottom: 20px;">
+   <img src="img/nullvalues_bars.png" alt="Null Values Bars" style="width: 80%;">
 </div>
 
 - Conversione delle colonne temporali in formato datetime per una migliore manipolazione.
