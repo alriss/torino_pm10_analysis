@@ -35,19 +35,19 @@ La struttura del repository è la seguente:
 │── data/                                       # Cartella contenente file CSV
 │   │── Torino_Lingotto_PM10_2024.csv           # Dati PM10 
 │   │── Torino_Vallere_precipitazioni_2024.csv  # Dati sulle precipitazioni
-│   │── Torino_Vallere_temperature_2024.csv     # Dati sulle temperature
+│   └── Torino_Vallere_temperature_2024.csv     # Dati sulle temperature
 │── src/                                        # Contiene script Python
 │   │── main.py                                 # Script principale
 │   │── utils.py                                # Funzioni utili (es. caricamento e pulizia dati)
 │   │── visualization.py                        # Funzioni per la creazione di grafici
-│   │── statistical_tests.py                    # Funzioni per test statistici e modelli
+│   └── statistical_tests.py                    # Funzioni per test statistici e modelli
 │── img/                                        # Immagini
 │── .gitignore                                  # File da ignorare
 │── LICENSE                                     # Licenza MIT
 │── output.log                                  # File di log
 │── requirements.txt                            # Dipendenze Python
 │── README.md                                   # Documentazione del progetto
-│── README-IT.md                                # Documentazione del progetto in italiano
+└── README-IT.md                                # Documentazione del progetto in italiano
 ```
 
 ## Installazione e Configurazione  

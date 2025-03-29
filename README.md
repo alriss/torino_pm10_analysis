@@ -33,19 +33,19 @@ The repository structure is as follows:
 │── data/                                       # Folder containing CSV files
 │   │── Torino_Lingotto_PM10_2024.csv           # PM10 data 
 │   │── Torino_Vallere_precipitazioni_2024.csv  # Rainfall data
-│   │── Torino_Vallere_temperature_2024.csv     # Temperature data
+│   └── Torino_Vallere_temperature_2024.csv     # Temperature data
 │── src/                                        # Contains Python scripts
 │   │── main.py                                 # Main script
 │   │── utils.py                                # Useful functions (e.g., data loading and cleaning)
 │   │── visualization.py                        # Functions for creating charts
-│   │── statistical_tests.py                    # Functions for statistical tests and models
+│   └── statistical_tests.py                    # Functions for statistical tests and models
 │── img/                                        # Images
 │── .gitignore                                  # List of files to ignorepip              
 │── LICENSE                                     # MIT License
 │── output.log                                  # Log file
 │── requirements.txt                            # Python dependencies
 │── README.md                                   # Project documentation
-│── README-IT.md                                # Project documentation in Italian
+└── README-IT.md                                # Project documentation in Italian
 ```
 
 ## Installation and Setup
